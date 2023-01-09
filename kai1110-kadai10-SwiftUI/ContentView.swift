@@ -20,13 +20,12 @@ struct ContentView: View {
         }
     }
     func decisionColor(number: Int) -> Color {
-        if(number % 3 == 0) {
+        switch number % 3 {
+        case 0:
             return Color.red
-        }
-        else if(number % 3 == 1) {
+        case 1:
             return Color.green
-        }
-        else {
+        default:
             return Color.blue
         }
     }
